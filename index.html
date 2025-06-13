@@ -2,23 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Grammar Test for ESL Students</title>
+  <title>Grammar Test Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="quiz-container">
-    <h1>Grammar Quiz for ESL Students (Age 12)</h1>
-    <div id="question-container">
+    <div id="login-container">
+      <h1>Welcome to the Grammar Quiz</h1>
+      <p>Please enter your invite code:</p>
+      <input type="text" id="invite-code" placeholder="Enter code here" />
+      <button onclick="checkCode()">Enter</button>
+      <p id="login-message" class="error"></p>
+    </div>
+
+    <div id="question-container" style="display: none;">
+      <h1>Grammar Quiz for ESL Students (Age 12)</h1>
       <p id="question"></p>
       <div id="choices"></div>
       <button id="next-button">Next</button>
     </div>
+
     <div id="result-container" style="display: none;">
       <h2>Quiz Finished!</h2>
       <p id="score"></p>
       <button onclick="location.reload()">Try Again</button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
+
